@@ -1,0 +1,157 @@
+:root{
+    
+    /* COLORS */
+    --black : #333333;
+    --white : #ffffff;
+    --soft-black: #4f4f4f;
+    --grey: #bdbdbd;
+
+    /* FONTS */
+    --Inconsolata: 'Inconsolata', monospace;
+    --Montserrat: 'Montserrat', sans-serif;
+    --Space-Mono: 'Space Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* MOBILE STYLE */
+
+.error{
+    color: var(--black);
+    text-transform: uppercase;
+    font-family: var(--Inconsolata);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.57375rem;
+    letter-spacing: -0.08rem;
+    padding:20px 0 64px 24px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .image{
+    width: 238px;
+    height: 286.83px;
+    background-image: url(./img/Scarecrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 44px;
+}
+
+.container .content{
+    margin-left: 24px;
+    color: var(--black);
+    font-family: var(--Space-Mono);
+    letter-spacing: -0.035rem;
+}
+
+.container .content h1{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4.443125rem;
+    margin-bottom: 30px;
+}
+
+.container .content h2{
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.66625rem;
+    margin-bottom: 66px;
+}
+
+.container .content button{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.295625rem;
+    padding: 24px 43px;
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+}
+
+.container .content button:hover{
+    background-color: var(--soft-black);
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+    position: absolute;
+    bottom: 0;
+}
+
+.credits{
+    color: var(--grey);
+    font-family: var(--Montserrat);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.066875rem;
+}
+
+.credits span{
+    font-weight: 700;
+}
+
+
+/* DESKTOP STYLE */
+
+@media screen and (min-width: 1024px){
+
+    main{
+        padding-top: 40px;
+        margin: 0 77px 0 77px;
+    }
+
+    .container{
+        width: 100%;
+        flex-direction: row;
+        gap: 118.78px;
+        margin-top: 200px;
+    }
+
+    .container .image{
+        width: 539.22px;
+        height: 447.43px;
+    }
+
+    .container .content{
+        margin: 0;
+    }
+    
+    .container .content h1{
+        font-size: 4rem;
+        line-height: 5.92375rem;
+    }
+
+    .container .content h2{
+        font-size: 1.5rem;
+        line-height: 2.22125rem;
+        max-width: 381px;
+    }
+
+}
+
+@media screen and (min-width: 1441px){
+    .container{
+        max-width: 1300px;
+        margin: 200px auto;
+    }
+}
